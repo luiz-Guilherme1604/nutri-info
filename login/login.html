@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nutri Info</title>
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="ind.css">
+  <!-- <link rel="stylesheet" href="../css/style.min.css"> -->
+  
+
+</head>
+<body>
+  <header class="header">
+    <div class="header container">
+      <a href="../index.html"
+        ><img src="../img/fotos/Novo Projeto (8).png" width="190" height="55" alt="logo"
+      /></a>
+      <nav aria-label="primaria">
+        <ul class="header-menu font-1-m cor-0">
+          <li><a href="../index.html" class="ativo">Home</a></li>
+          <li><a href="#SobreNos" class="ativo">Sobre-Nós</a></li>
+          <li><a href="./calculadoras/calculadora.html" class="ativo">Calculadoras</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center">
+            <!-- Toggle between Log In and Sign Up -->
+            <h6 class="mb-0 pb-3">
+              <span>Log In</span><span>Sign Up</span>
+            </h6>
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+            <label for="reg-log"></label>
+            
+            <!-- Card Wrapper -->
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+                
+                <!-- Log In Card -->
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Log In</h4>
+                      <div class="form-group">
+                        <input type="email" class="form-style" placeholder="Email" id="login_field">
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" class="form-style" placeholder="Password" id="password">
+                        <i class="input-icon uil uil-lock-alt"></i>
+                        <i class="fa fa-eye" id="on" onclick="mostrarSenha()"></i>
+                        <i class="fa fa-eye-slash" id="of" onclick="ocultarSenha()"></i>
+                      </div>
+                      <input type="checkbox" id="remember-me">
+                      <button class="btn mt-4" onclick="logar(); return false">Login</button>
+                      <p class="mb-0 mt-4 text-center">
+                        <a href="#" id="link" >Esqueceu sua Senha?</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Sign Up Card -->
+                <div class="card-back">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-3 pb-3">Sign Up</h4>
+                      <form id="signup-form">
+                        <div class="form-group">
+                          <input type="text" class="form-style" placeholder="Full Name" id="Name_Field">
+                          <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="tel" class="form-style" placeholder="Phone Number" id="Phone_Field">
+                          <i class="input-icon uil uil-phone"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="email" class="form-style" placeholder="Email" id="Login_field">
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2"> 
+                          <input type="password" class="form-style" placeholder="Password"
+                          id="signup_password"> 
+                          <i class="input-icon uil uil-lock-alt"></i>
+                          <i class="fa fa-eye" id="signup_on"onclick="mostrarSenha()"></i> 
+                          <i class="fa fa-eye-slash" id="signup_off" onclick="ocultarSenha()"></i>
+                      </div>
+                        <button class="btn mt-4" type="submit" id="btn">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="sigUP.js"></script>
+  <script src="ind.js"></script>
+  <script src="in.js"></script>
+</body>
+</html>

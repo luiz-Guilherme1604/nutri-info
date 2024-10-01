@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <!-- Tags padrão de conteúdo do cabeçalho html -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel='icon' sizes="192x192" href="../img/fotos/Novo Projeto (6).png" type="image/png">
+
+    <title>Nutri Info</title>
+</head>
+
+<body>
+    
+    <div class="header container">
+        <a href="../index.html"><img src="../img/fotos/Novo Projeto (8).png" width="136" height="55" id="teste"  alt="logo" /></a>
+        <nav aria-label="primaria">
+          <ul class="header-menu font-1-m cor-0">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./calorias.html">Minhas Calorias</a></li>
+            <li><a href="./login/login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    <main class="formcontainer">
+    
+        <section class="titleBox">
+            <h2 class="mainlogo"> - Passo 1: Calcular PDCT <i class="fas fa-fire"></i> - <br>
+                (Meta pessoal de calorias diárias)</h2>
+        </section>
+        
+        <section id="firstformcontainer">
+            <form id="firstform" class="bmrinputs" method="POST" action="https://formdump.codeinstitute.net/">
+                
+                <h3>Por favor, preencha cada campo abaixo:</h3>
+               
+                <section class="formdata">
+                    
+                    <label for="age">Idade (Anos):</label>
+                    <input class="inputs" id="age" name="age" type="number" required min="18">
+                </section>
+
+                <section class="formdata">
+                    
+                    <label for="weight">Peso (Kg):</label>
+                    <input class="inputs" id="weight" name="weight" type="number" required>
+                </section>
+
+                <section class="formdata">
+                    
+                    <label for="height">Altura (cm):</label>
+                    <input class="inputs" id="height" name="height" type="number" required>
+                </section>
+
+                <section class="calorieSelects">
+                   
+                    <label for="gender">Gênero:</label>
+                    <select class="inputs" name="gender-options" id="gender" style="width: 170px;">
+                        <option>Escolha um Gênero</option>
+                        <option value="male">Masculino</option>
+                        <option value="female">Feminino</option>
+                    </select>
+                </section>
+
+                <section class="calorieSelects">
+                    <label for="activity">Nível de Atividade:</label>
+                    <select class="inputs" name="activity-options" id="activity" style="width: 170px;">
+                        <option value="">Selecione um Nivel de Atividade</option>
+                        <option value="sedentary">Sedentário</option>
+                        <option value="lightlyActive">Levemente Ativo</option>
+                        <option value="moderatelyActive">Moderadamente Ativo</option>
+                        <option value="veryActive">Muito Ativo</option>
+                        <option value="extraActive">Extremamente Ativo</option>
+                    </select>
+                </section>
+            </form>
+        </section>
+        <section class="button-container">
+            <button id="calculate-pdct">Calcular Meu PDCT</button>
+        </section>
+       
+        <section id="pdct-section" class="hide">
+            Seu PDCT é: <span id="display-pdct"></span>
+        </section>
+        
+        <section id="buttonBox" class="buttonBox hide">
+            <a id="nextStep1" href="./macros.html" class="buttonlogo">- Próxima Etapa <i class="fas fa-fire"></i> -</a>
+        </section>
+        
+        <div id="ageModal" class="modal">
+            
+            <div class="modal-content">
+                <span class="close" id="ageSpan">&times;</span>
+                <p>A idade deve estar entre 18 e 95</p>
+            </div>
+        </div>
+        
+        <div id="weightModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="weightSpan">&times;</span>
+                <p>O peso inicial não deve ser inferior a 20 Kg ou superior a 400 Kg por motivos de segurança</p>
+            </div>
+        </div>
+       
+        <div id="heightModal" class="modal">
+            
+            <div class="modal-content">
+                <span class="close" id="heightSpan">&times;</span>
+                <p>A altura deve estar entre 50 e 300 Centimetros por motivos de segurança</p>
+            </div>
+        </div>
+        
+        <div id="genderModal" class="modal">
+            
+            <div class="modal-content">
+                <span class="close" id="genderSpan">&times;</span>
+                <p>Por favor, selecione um Gênero</p>
+            </div>
+        </div>
+        
+        <div id="activityModal" class="modal">
+           
+            <div class="modal-content">
+                <span class="close" id="activitySpan">&times;</span>
+                <p>Por favor, selecione um Nível de Atividade</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section class="footer-bottom">
+            <p>NutriInfo &copy; Todos os direitos reservados</p>
+        </section>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/45a746d079.js" crossorigin="anonymous"></script>
+    <script src="./js/calorias.js"></script>
+</body>
+</html>
